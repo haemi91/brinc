@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" > 
+    <title>brinc</title> 
+    <meta content="" property="og:title"> 
+    <meta content="" property="og:url"> 
+    <meta content="" property="og:description"> 
+    <meta content="" property="og:image">
+    <meta content="website" property="og:type"> 
+    <meta content="" property="og:site_name"> 
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="#">
+
+    <!-- hmlt5 support -->
+    
+    <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if lte IE 8]>
+    <p style="font-size: 12px; color: #fff; background: #2885b0; padding:5px 0; margin: 0; text-align: center">
+        사용하고 계신 브라우저는 최신 웹 브라우저가 아닙니다. 업그레이드를 하거나 다른 최신 브라우저 사용을 권장합니다.
+        <a href="http://www.microsoft.com/korea/ie" target="_blank" >업그레이드,</a>
+        <a href="http://www.mozilla.or.kr/ko/" target="_blank">파이어폭스,</a>
+        <a href="http://kr.opera.com/download/" target="_blank">오페라,</a>,
+        <a href="http://support.apple.com/kb/DL1531?viewlocale=ko_KR&locale=ko_KR" target="_blank">사파리,</a>
+        <a href="http://www.google.com/chrome?hl=ko" target="_blank">크롬</a>
+    </p>
+    <![endif]-->
+
+    <!--// hmlt5 support -->
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <!-- s :: header -->
+            <header class="header">
+                <h1 class="header__logo">
+                    <a href="javascript:;" class="header__logo__link">
+                        <img src="../assets/images/header/logo.png" alt="logo">
+                    </a>
+                </h1>
+                <nav class="gnb__area">
+                    <ul class="gnb">
+                        <li class="gnb__item"><a href="javascript:;" class="gnb__item__link">Trade</a></li>
+                        <li class="gnb__item"><a href="javascript:;" class="gnb__item__link">Stake</a></li>
+                        <li class="gnb__item"><a href="javascript:;" class="gnb__item__link">Analytics</a></li>
+                        <li class="gnb__item">
+                            <a href="javascript:;" class="gnb__item__link community__item__link" id="community__item__link">
+                                Community 
+                                <span class="svg__wrap">
+                                    <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 1.25L4.5 4.75L1 1.25" stroke="white" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
+                            <ul class="community__sub">
+                                <li class="community__sub__list"><a href="javascript:;" class="community__sub__link">Socail media</a></li>
+                                <li class="community__sub__list"><a href="javascript:;" class="community__sub__link">Spearhead</a></li>
+                                <li class="community__sub__list"><a href="javascript:;" class="community__sub__link">Initial Defi Offering</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="select__area">
+                    <li class="select__item">
+                        <button type="button" class="btn__wallet">
+                            <span class="svg__wrap">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 12V8H6C5.46957 8 4.96086 7.78929 4.58579 7.41421C4.21071 7.03914 4 6.53043 4 6C4 4.9 4.9 4 6 4H18V8" stroke="#01AA68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4 6V18C4 19.1 4.9 20 6 20H20V16" stroke="#01AA68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18 12C17.4696 12 16.9609 12.2107 16.5858 12.5858C16.2107 12.9609 16 13.4696 16 14C16 15.1 16.9 16 18 16H22V12H18Z" stroke="#01AA68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="txt">Connect wallet</span>
+                        </button>
+                    </li>
+                    <li class="select__item secon__select__item">
+                        <span class="svg__wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#01AA68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z" stroke="#01AA68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z" stroke="#01AA68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <ul class="sub__select__area">
+                            <li class="sub__select__item">
+                                <a href="javascript:;" class="sub__select__link">
+                                    <span class="svg__wrap"><img src="../assets/images/header/ico_frame_about.png" alt="about us"></span>
+                                    <span class="sub__txt">About us</span>
+                                </a>
+                            </li>
+                            <li class="sub__select__item">
+                                <a href="javascript:;" class="sub__select__link">
+                                    <span class="svg__wrap"><img src="../assets/images/header/ico_frame_text.png" alt="Documentation"></span>
+                                    <span class="sub__txt">Documentation</span>
+                                </a>
+                            </li>
+                            <li class="sub__select__item">
+                                <a href="javascript:;" class="sub__select__link">
+                                    <span class="svg__wrap"><img src="../assets/images/header/ico_frame_code.png" alt="Code"></span>
+                                    <span class="sub__txt">Code</span>
+                                </a>
+                            </li>
+                            <li class="sub__select__item">
+                                <a href="javascript:;" class="sub__select__link">
+                                    <span class="svg__wrap"><img src="../assets/images/header/ico_frame_user.png" alt="Referral program"></span>
+                                    <span class="sub__txt">Referral program</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </header>
+            <!-- e :: header -->
+            <!-- s :: main -->
+            <div id="main">
+                <section class="section__area index__section__area">
+                    <div class="inner inner__small">
+                        <header class="toggle__head">
+                            <div class="toggle__menu">
+                                <div class="toggle__container">
+                                    <button class="btn toggle__menu__tit" data-option="buyBRC">Buy BRC</button>
+                                    <button class="btn toggle__menu__tit active" data-option="sellBRC">Sell BRC</button>
+                                    <span class="tab__indicator"></span>
+                                </div>
+                            </div>
+                        </header>
+                        <article class="content__box">
+                            <header class="tit__box">
+                                <h2 class="tit">Swap</h2>
+                                <div class="cont__settings">
+                                    <button type="button" class="btn__settings">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.3333 14.4432H14.0833C14.0833 14.029 13.7475 13.6932 13.3333 13.6932V14.4432ZM13.3333 17.4432V18.1932C13.7475 18.1932 14.0833 17.8574 14.0833 17.4432H13.3333ZM2.5 17.4432H1.75C1.75 17.8574 2.08579 18.1932 2.5 18.1932V17.4432ZM2.5 14.4432V13.6932C2.08579 13.6932 1.75 14.029 1.75 14.4432H2.5ZM3.76613 14.4432V15.1932C4.18035 15.1932 4.51613 14.8574 4.51613 14.4432H3.76613ZM12.0161 14.4432H11.2661C11.2661 14.8574 11.6019 15.1932 12.0161 15.1932V14.4432ZM3.76613 2.44324V1.69324C3.35192 1.69324 3.01613 2.02902 3.01613 2.44324H3.76613ZM12.0161 2.44324H12.7661C12.7661 2.02902 12.4303 1.69324 12.0161 1.69324V2.44324ZM5.64113 5.81824V5.06824C5.22692 5.06824 4.89113 5.40402 4.89113 5.81824H5.64113ZM10.1411 5.81824H10.8911C10.8911 5.40402 10.5553 5.06824 10.1411 5.06824V5.81824ZM10.1411 8.81824V9.56824C10.5553 9.56824 10.8911 9.23245 10.8911 8.81824H10.1411ZM5.64113 8.81824H4.89113C4.89113 9.23245 5.22692 9.56824 5.64113 9.56824V8.81824ZM13.8911 9.56824H14.6411C14.6411 9.15402 14.3053 8.81824 13.8911 8.81824V9.56824ZM13.8911 11.8182H13.1411C13.1411 12.2324 13.4769 12.5682 13.8911 12.5682V11.8182ZM16.1411 11.8182V12.5682C16.5553 12.5682 16.8911 12.2324 16.8911 11.8182H16.1411ZM15.5341 3.40082C15.2345 3.11476 14.7598 3.12571 14.4737 3.42528C14.1877 3.72485 14.1986 4.19959 14.4982 4.48566L15.5341 3.40082ZM12.5833 14.4432V17.4432H14.0833V14.4432H12.5833ZM13.3333 16.6932H2.5V18.1932H13.3333V16.6932ZM3.25 17.4432V14.4432H1.75V17.4432H3.25ZM2.5 15.1932H3.76613V13.6932H2.5V15.1932ZM12.0161 15.1932H13.3333V13.6932H12.0161V15.1932ZM3.76613 3.19324H12.0161V1.69324H3.76613V3.19324ZM11.2661 2.44324V14.4432H12.7661V2.44324H11.2661ZM4.51613 14.4432V2.44324H3.01613V14.4432H4.51613ZM5.64113 6.56824H10.1411V5.06824H5.64113V6.56824ZM9.39113 5.81824V8.81824H10.8911V5.81824H9.39113ZM10.1411 8.06824H5.64113V9.56824H10.1411V8.06824ZM6.39113 8.81824V5.81824H4.89113V8.81824H6.39113ZM12.0161 10.3182H13.8911V8.81824H12.0161V10.3182ZM13.1411 9.56824V11.8182H14.6411V9.56824H13.1411ZM13.8911 12.5682H16.1411V11.0682H13.8911V12.5682ZM16.8911 11.8182V7.31824H15.3911V11.8182H16.8911ZM16.5161 6.56824C16.5161 6.77534 16.3482 6.94324 16.1411 6.94324V8.44324C17.1767 8.44324 18.0161 7.60377 18.0161 6.56824H16.5161ZM16.1411 6.94324C15.934 6.94324 15.7661 6.77534 15.7661 6.56824H14.2661C14.2661 7.60377 15.1056 8.44324 16.1411 8.44324V6.94324ZM15.7661 6.56824C15.7661 6.36113 15.934 6.19324 16.1411 6.19324V4.69324C15.1056 4.69324 14.2661 5.5327 14.2661 6.56824H15.7661ZM16.1411 6.19324C16.3482 6.19324 16.5161 6.36113 16.5161 6.56824H18.0161C18.0161 5.5327 17.1767 4.69324 16.1411 4.69324V6.19324ZM17.4976 5.27582L15.5341 3.40082L14.4982 4.48566L16.4617 6.36066L17.4976 5.27582Z" fill="#01AA68"/>
+                                        </svg>
+                                    </button>
+                                    <button type="button" class="btn__settings">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.99967 14.6667C11.6816 14.6667 14.6663 11.6819 14.6663 8.00004C14.6663 4.31814 11.6816 1.33337 7.99967 1.33337C4.31778 1.33337 1.33301 4.31814 1.33301 8.00004C1.33301 11.6819 4.31778 14.6667 7.99967 14.6667Z" stroke="#01AA68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8 10.6667V8" stroke="#01AA68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8 5.33337H8.00667" stroke="#01AA68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </header>
+                            <section class="index__section">
+                                <!-- s :: From -->
+                                <article class="index__area">
+                                    <div>
+                                        <header class="tit__box">
+                                            <h3 class="tit">From</h3>
+                                            <button type="button" class="btn__settings">MAX</button>
+                                        </header>
+                                        <article class="index__area__inneer">
+                                            <div class="index__box">
+                                                <div class="cont__box">
+                                                    <div class="custom__select__area">
+                                                        <div class="custom__select" tabindex="0">
+                                                            <span><img src="../assets/images/icon.svg"></span>
+                                                            <span class="custom__select__text">BRC</span>
+                                                            <span class="custom__select__arrow">
+                                                                <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M8 1.25L4.5 4.75L1 1.25" stroke="white" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                        <ul class="custom__select__list">
+                                                            <li value="BRC" class="custom__select__option">
+                                                                <span><img src="../assets/images/icon.svg"></span>
+                                                                <span class="txt">BRC</span>
+                                                            </li>
+                                                        </ul>
+                                                        <p class="bottom__txt"><span>Balance</span> : <span>0 BRC</span></p>
+                                                    </div>
+                                                    <div class="cont__number">
+                                                        <p class="txt">0.0</p>
+                                                        <p class="bottom__txt text-align-right">~ <span>$0.0</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </article><!-- e :: From -->
+                                <!-- s :: To -->
+                                <article class="index__area">
+                                    <div>
+                                        <header class="tit__box">
+                                            <h3 class="tit">To</h3>
+                                            <button type="button" class="btn__settings">MAX</button>
+                                        </header>
+                                        <article class="index__area__inneer">
+                                            <div class="index__box">
+                                                <div class="cont__box">
+                                                    <div class="custom__select__area">
+                                                        <div class="custom__select" tabindex="0">
+                                                            <span><img src="../assets/images/icon.svg"></span>
+                                                            <span class="custom__select__text">BRC</span>
+                                                            <span class="custom__select__arrow">
+                                                                <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M8 1.25L4.5 4.75L1 1.25" stroke="white" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                        <ul class="custom__select__list">
+                                                            <li value="BRC" class="custom__select__option">
+                                                                <span><img src="../assets/images/icon.svg"></span>
+                                                                <span class="txt">BRC</span>
+                                                            </li>
+                                                        </ul>
+                                                        <p class="bottom__txt"><span>Balance</span> : <span>0 BRC</span></p>
+                                                    </div>
+                                                    <div class="cont__number">
+                                                        <p class="txt">0.0</p>
+                                                        <p class="bottom__txt text-align-right">~ <span>$0.0</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </article><!-- e :: To -->
+                            </section>
+                            <div class="select__area section__wallet">
+                                <button type="button" class="select__item">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 12V8H6C5.46957 8 4.96086 7.78929 4.58579 7.41421C4.21071 7.03914 4 6.53043 4 6C4 4.9 4.9 4 6 4H18V8" stroke="#202024" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4 6V18C4 19.1 4.9 20 6 20H20V16" stroke="#202024" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M18 12C17.4696 12 16.9609 12.2107 16.5858 12.5858C16.2107 12.9609 16 13.4696 16 14C16 15.1 16.9 16 18 16H22V12H18Z" stroke="#202024" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="txt">Connect wallet</span>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+            <!-- e :: main -->
+            <!-- s :: footer -->
+            <footer class="footer">
+                <div class="footer__inner">
+                    <div class="foot__snn__link">
+                        <a href="javascript:;" class="sns__link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.1668 2.50008C18.3688 3.06298 17.4853 3.4935 16.5502 3.77508C16.0483 3.198 15.3813 2.78899 14.6394 2.60335C13.8974 2.41771 13.1164 2.46441 12.4019 2.73712C11.6874 3.00984 11.0739 3.49541 10.6443 4.12818C10.2148 4.76094 9.98991 5.51036 10.0002 6.27508V7.10841C8.53569 7.14639 7.08456 6.82159 5.776 6.16295C4.46745 5.50431 3.34209 4.53228 2.50016 3.33341C2.50016 3.33341 -0.83317 10.8334 6.66683 14.1667C4.9506 15.3317 2.90613 15.9159 0.833496 15.8334C8.3335 20.0001 17.5002 15.8334 17.5002 6.25008C17.4994 6.01796 17.4771 5.78641 17.4335 5.55841C18.284 4.71966 18.8842 3.66067 19.1668 2.50008Z" stroke="#01AA68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:;" class="sns__link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.1665 1.66675H5.83317C3.53198 1.66675 1.6665 3.53223 1.6665 5.83342V14.1667C1.6665 16.4679 3.53198 18.3334 5.83317 18.3334H14.1665C16.4677 18.3334 18.3332 16.4679 18.3332 14.1667V5.83342C18.3332 3.53223 16.4677 1.66675 14.1665 1.66675Z" stroke="#01AA68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.3333 9.47501C13.4361 10.1685 13.3176 10.8769 12.9947 11.4992C12.6718 12.1215 12.1609 12.6262 11.5346 12.9414C10.9083 13.2566 10.1986 13.3663 9.50641 13.2549C8.81419 13.1436 8.17472 12.8167 7.67895 12.321C7.18318 11.8252 6.85636 11.1857 6.74497 10.4935C6.63359 9.8013 6.74331 9.09159 7.05852 8.46532C7.37374 7.83905 7.87841 7.32812 8.50074 7.00521C9.12307 6.68229 9.83138 6.56383 10.5249 6.66667C11.2324 6.77158 11.8873 7.10123 12.393 7.60693C12.8987 8.11263 13.2283 8.76757 13.3333 9.47501Z" stroke="#01AA68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.5835 5.41675H14.5918" stroke="#01AA68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:;" class="sns__link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.3332 1.66675L9.1665 10.8334" stroke="#01AA68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18.3332 1.66675L12.4998 18.3334L9.1665 10.8334L1.6665 7.50008L18.3332 1.66675Z" stroke="#01AA68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:;" class="sns__link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.0002 1.66675H12.5002C11.3951 1.66675 10.3353 2.10573 9.55388 2.88714C8.77248 3.66854 8.3335 4.72835 8.3335 5.83341V8.33342H5.8335V11.6667H8.3335V18.3334H11.6668V11.6667H14.1668L15.0002 8.33342H11.6668V5.83341C11.6668 5.6124 11.7546 5.40044 11.9109 5.24416C12.0672 5.08788 12.2791 5.00008 12.5002 5.00008H15.0002V1.66675Z" stroke="#01AA68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <ul class="foot__nav">
+                        <li class="foot__nav__item"><a href="javascript:;" class="foot__nav__link">Contact</a></li>
+                        <li class="foot__nav__item"><a href="javascript:;" class="foot__nav__link">Help center</a></li>
+                        <li class="foot__nav__item"><a href="javascript:;" class="foot__nav__link">Terms of Service</a></li>
+                        <li class="foot__nav__item"><a href="javascript:;" class="foot__nav__link">Privacy Policy</a></li>
+                    </ul>
+                    <p class="copyright">© Brinc finance 2021. All rights reserved.</p>
+                </div>
+            </footer>
+            <!-- e :: footer -->
+        </div>
+    </div>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script>
+        
+        // toggle menu
+        $(document).on("click", ".toggle__menu__tit", function(){
+            if($(this).hasClass("active")){
+                $(this).closest(".toggle__menu");
+                $(this).removeClass("active");
+            }else{
+                $(this).addClass("active");
+                $(".toggle__menu ").addClass("on");
+                $(".tab__indicator").css({ transform: "translateX(" + $(this).position().left + "px)", width: $(this).outerWidth() + "px" });
+                $(this).siblings().removeClass("active")
+            }
+        })
+        window.addEventListener("resize", function () {
+            $(".toggle__menu.on").each(function () {
+                $(this).removeClass("on");
+            });
+        });
+
+        // select
+        let selectFlag;
+        $('.custom__select').on('click', function() {
+            $(this).toggleClass('selected');
+            if($(this).hasClass('selected')) {
+                $('.custom__select__list').show();
+            } else {
+                $('.custom__select__list').hide();
+            }
+        })
+
+        $('.custom__select').on('focusin', function() {
+            $('.custom__select__list').show();
+        }).on('focusout', function() {
+            if(!selectFlag) {
+                $('.custom__select__list').hide();
+            }
+            $(this).removeClass('selected');
+        });
+
+        $('.custom__select__option').on('mouseenter', function() {
+            selectFlag = true;
+        }).on('mouseout', function() {
+            selectFlag = false;
+        });
+
+        $('.custom__select__option').on('click', function() {
+            let value = $(this).attr('value');
+
+            $('.custom__select__text').text($(this).text());
+            $('.custom__select__list').hide();
+
+        });
+        
+    </script>
+</body>
+</html>
