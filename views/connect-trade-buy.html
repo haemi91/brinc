@@ -4,7 +4,7 @@
     <meta charset="utf-8"> 
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" > 
-    <title>brinc</title> 
+    <title>trade</title> 
     <meta content="" property="og:title"> 
     <meta content="" property="og:url"> 
     <meta content="" property="og:description"> 
@@ -48,7 +48,7 @@
                 </h1>
                 <nav class="gnb__area">
                     <ul class="gnb">
-                        <li class="gnb__item"><a href="javascript:;" class="gnb__item__link">Trade</a></li>
+                        <li class="gnb__item on"><a href="javascript:;" class="gnb__item__link">Trade</a></li>
                         <li class="gnb__item"><a href="javascript:;" class="gnb__item__link">Stake</a></li>
                         <li class="gnb__item"><a href="javascript:;" class="gnb__item__link">Analytics</a></li>
                         <li class="gnb__item">
@@ -126,8 +126,8 @@
                         <header class="toggle__head">
                             <div class="toggle__menu">
                                 <div class="toggle__container">
-                                    <button class="btn toggle__menu__tit" data-option="buyBRC">Buy BRC</button>
-                                    <button class="btn toggle__menu__tit active" data-option="sellBRC">Sell BRC</button>
+                                    <button class="btn toggle__menu__tit active" data-option="buyBRC">Buy BRC</button>
+                                    <button class="btn toggle__menu__tit" data-option="sellBRC">Sell BRC</button>
                                     <span class="tab__indicator"></span>
                                 </div>
                             </div>
@@ -155,7 +155,7 @@
                                 <article class="index__area">
                                     <div>
                                         <header class="tit__box">
-                                            <h3 class="tit">From</h3>
+                                            <h3 class="sub__tit">From</h3>
                                             <button type="button" class="btn__settings">MAX</button>
                                         </header>
                                         <article class="index__area__inneer">
@@ -173,8 +173,28 @@
                                                         </div>
                                                         <ul class="custom__select__list">
                                                             <li value="BRC" class="custom__select__option">
-                                                                <span><img src="../assets/images/icon.svg"></span>
+                                                                <span class="ico"><img src="../assets/images/icon.svg"></span>
                                                                 <span class="txt">BRC</span>
+                                                            </li>
+                                                            <li value="ETH" class="custom__select__option">
+                                                                <span class="ico"><img src="../assets/images/ico_token.svg"></span>
+                                                                <span class="txt">ETH</span>
+                                                            </li>
+                                                            <li value="wBTC" class="custom__select__option">
+                                                                <span class="ico"><img src="../assets/images/ico_wbtc.svg"></span>
+                                                                <span class="txt">wBTC</span>
+                                                            </li>
+                                                            <li value="DAI" class="custom__select__option">
+                                                                <span class="ico"><img src="../assets/images/ico_dai.svg"></span>
+                                                                <span class="txt">DAI</span>
+                                                            </li>
+                                                            <li value="USDT" class="custom__select__option">
+                                                                <span class="ico"><img src="../assets/images/ico_usdt.svg"></span>
+                                                                <span class="txt">USDT</span>
+                                                            </li>
+                                                            <li value="USDC" class="custom__select__option">
+                                                                <span class="ico"><img src="../assets/images/ico_usdc.svg"></span>
+                                                                <span class="txt">USDC</span>
                                                             </li>
                                                         </ul>
                                                         <p class="bottom__txt"><span>Balance</span> : <span>0 BRC</span></p>
@@ -188,11 +208,28 @@
                                         </article>
                                     </div>
                                 </article><!-- e :: From -->
+                                <!-- s :: arrow -->
+                                <div class="arrow__hr__box">
+                                    <p class="arrow__hr">
+                                        <span class="ico_arrow">
+                                            <svg width="7" height="14" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 3.4L3.4 1L5.8 3.4" stroke="#01AA68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M3.3999 1V13" stroke="#01AA68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                        <span class="ico_arrow">
+                                            <svg width="7" height="14" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.20007 10.6001L3.60007 13.0001L6.00007 10.6001" stroke="#01AA68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M3.6001 1V13" stroke="#01AA68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </p>
+                                </div><!-- e :: arrow -->
                                 <!-- s :: To -->
                                 <article class="index__area">
                                     <div>
                                         <header class="tit__box">
-                                            <h3 class="tit">To</h3>
+                                            <h3 class="sub__tit">To</h3>
                                             <button type="button" class="btn__settings">MAX</button>
                                         </header>
                                         <article class="index__area__inneer">
@@ -200,7 +237,7 @@
                                                 <div class="cont__box">
                                                     <div class="custom__select__area">
                                                         <div class="custom__select" tabindex="0">
-                                                            <span><img src="../assets/images/icon.svg"></span>
+                                                            <span class="ico__img"><img src="../assets/images/icon.svg"></span>
                                                             <span class="custom__select__text">BRC</span>
                                                             <span class="custom__select__arrow">
                                                                 <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -210,8 +247,28 @@
                                                         </div>
                                                         <ul class="custom__select__list">
                                                             <li value="BRC" class="custom__select__option">
-                                                                <span><img src="../assets/images/icon.svg"></span>
+                                                                <span class="ico"><img src="../assets/images/icon.svg"></span>
                                                                 <span class="txt">BRC</span>
+                                                            </li>
+                                                            <li value="ETH" class="custom__select__option">
+                                                                <span class="ico"><img src="../assets/images/ico_token.svg"></span>
+                                                                <span class="txt">ETH</span>
+                                                            </li>
+                                                            <li value="wBTC" class="custom__select__option">
+                                                                <span class="ico"><img src="../assets/images/ico_wbtc.svg"></span>
+                                                                <span class="txt">wBTC</span>
+                                                            </li>
+                                                            <li value="DAI" class="custom__select__option">
+                                                                <span class="ico"><img src="../assets/images/ico_dai.svg"></span>
+                                                                <span class="txt">DAI</span>
+                                                            </li>
+                                                            <li value="USDT" class="custom__select__option">
+                                                                <span class="ico"><img src="../assets/images/ico_usdt.svg"></span>
+                                                                <span class="txt">USDT</span>
+                                                            </li>
+                                                            <li value="USDC" class="custom__select__option">
+                                                                <span class="ico"><img src="../assets/images/ico_usdc.svg"></span>
+                                                                <span class="txt">USDC</span>
                                                             </li>
                                                         </ul>
                                                         <p class="bottom__txt"><span>Balance</span> : <span>0 BRC</span></p>
@@ -305,17 +362,20 @@
 
         // select
         let selectFlag;
+
         $('.custom__select').on('click', function() {
+            var parent = $(this).parent();
             $(this).toggleClass('selected');
             if($(this).hasClass('selected')) {
-                $('.custom__select__list').show();
+                $(this).parent().children('.custom__select__list').show();
             } else {
-                $('.custom__select__list').hide();
+                $(this).parent().children('.custom__select__list').hide();
             }
         })
 
         $('.custom__select').on('focusin', function() {
-            $('.custom__select__list').show();
+            var parent = $(this).parent();
+            $(this).parent().children('.custom__select__list').show();
         }).on('focusout', function() {
             if(!selectFlag) {
                 $('.custom__select__list').hide();
@@ -330,8 +390,8 @@
         });
 
         $('.custom__select__option').on('click', function() {
-            let value = $(this).attr('value');
-
+            console.log($(this).text())
+            // $(".ico__img").text($(this).img());
             $('.custom__select__text').text($(this).text());
             $('.custom__select__list').hide();
 

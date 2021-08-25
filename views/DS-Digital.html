@@ -173,8 +173,28 @@
                                                         </div>
                                                         <ul class="custom__select__list">
                                                             <li value="BRC" class="custom__select__option">
-                                                                <span><img src="../assets/images/icon.svg"></span>
+                                                                <span class="ico"><img src="../assets/images/icon.svg"></span>
                                                                 <span class="txt">BRC</span>
+                                                            </li>
+                                                            <li value="ETH" class="custom__select__option">
+                                                                <span class="ico"><img src="../assets/images/ico_token.svg"></span>
+                                                                <span class="txt">ETH</span>
+                                                            </li>
+                                                            <li value="wBTC" class="custom__select__option">
+                                                                <span class="ico"><img src="../assets/images/ico_wbtc.svg"></span>
+                                                                <span class="txt">wBTC</span>
+                                                            </li>
+                                                            <li value="DAI" class="custom__select__option">
+                                                                <span class="ico"><img src="../assets/images/ico_dai.svg"></span>
+                                                                <span class="txt">DAI</span>
+                                                            </li>
+                                                            <li value="USDT" class="custom__select__option">
+                                                                <span class="ico"><img src="../assets/images/ico_usdt.svg"></span>
+                                                                <span class="txt">USDT</span>
+                                                            </li>
+                                                            <li value="USDC" class="custom__select__option">
+                                                                <span class="ico"><img src="../assets/images/ico_usdc.svg"></span>
+                                                                <span class="txt">USDC</span>
                                                             </li>
                                                         </ul>
                                                         <p class="bottom__txt"><span>Balance</span> : <span>0 BRC</span></p>
@@ -378,6 +398,62 @@
     <script src="../assets/js/common.js"></script>
     <script src="../assets/js/jquery-3.6.0.min.js"></script>
     <script>
+        
+        // toggle menu
+        $(document).on("click", ".toggle__menu__tit", function(){
+            if($(this).hasClass("active")){
+                $(this).closest(".toggle__menu");
+                $(this).removeClass("active");
+            }else{
+                $(this).addClass("active");
+                $(".toggle__menu ").addClass("on");
+                $(".tab__indicator").css({ transform: "translateX(" + $(this).position().left + "px)", width: $(this).outerWidth() + "px" });
+                $(this).siblings().removeClass("active")
+            }
+        })
+        window.addEventListener("resize", function () {
+            $(".toggle__menu.on").each(function () {
+                $(this).removeClass("on");
+            });
+        });
+
+        // select
+        let selectFlag;
+
+        $('.custom__select').on('click', function() {
+            var parent = $(this).parent();
+            $(this).toggleClass('selected');
+            if($(this).hasClass('selected')) {
+                $(this).parent().children('.custom__select__list').show();
+            } else {
+                $(this).parent().children('.custom__select__list').hide();
+            }
+        })
+
+        $('.custom__select').on('focusin', function() {
+            var parent = $(this).parent();
+            $(this).parent().children('.custom__select__list').show();
+        }).on('focusout', function() {
+            if(!selectFlag) {
+                $('.custom__select__list').hide();
+            }
+            $(this).removeClass('selected');
+        });
+
+        $('.custom__select__option').on('mouseenter', function() {
+            selectFlag = true;
+        }).on('mouseout', function() {
+            selectFlag = false;
+        });
+
+        $('.custom__select__option').on('click', function() {
+            let value = $(this).attr('value');
+
+            $('.custom__select__text').text($(this).text());
+            $('.custom__select__list').hide();
+
+        });
+        
     </script>
 </body>
 </html>
