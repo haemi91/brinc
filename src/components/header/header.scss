@@ -1,0 +1,145 @@
+@charset "utf-8"; 
+
+/* *******************************************************
+    filename : header.css
+    description : header layout CSS
+******************************************************** */
+
+// import
+@import '../../media/css/common.scss';
+
+/* content stylings =================================== */
+/* header */
+.header{
+    @include dspCollection(flex,space-between,center);
+    max-width: 1380px; 
+    width: $size100; 
+    margin: auto; 
+    padding-top: 24px;
+}
+
+/* gnb */
+.gnb__area .gnb {
+    display: flex;
+    .gnb__item {
+        + .gnb__item {padding-left: 56px;}
+        &.on .gnb__item__link {color: #fff; transition: color .3s;}
+    }
+    .gnb__item__link {
+        @include font(normal, normal, 15px, rgba(255, 255, 255, 0.5), 24px);
+        letter-spacing: -0.41px;
+        &:hover, &.selected {color: #fff;transition: color .3s;}
+        &:hover .svg__wrap svg path, 
+        &.selected .svg__wrap svg path {stroke-opacity: 1;}
+    }
+}
+
+/* header select */
+
+.select__area {
+    @include flexCenter;
+    position: relative;
+    .select__item {
+        @include boxsizing;
+        @include border-radius(100px);
+        @include transition(all .3s ease-in-out);
+        display: flex;
+        padding: 2px;
+        background: linear-gradient(#353A40 100%, #16171B 100%);
+        // background: rgba(54, 158, 73, 0.1);
+        &.secon__select__item {
+            @include circle(52px,52px);
+            margin-left: 15px;
+            cursor: pointer;
+            
+        }
+        .txt {
+            @include font(normal, bold, 15px, #fff, 24px);
+            display: inline-block;
+            margin-left: 12px;
+            letter-spacing: -0.41px;
+        }
+        .tr__menu {
+            @include dspFlexCenter();
+            @include border-radius(100px);
+            padding: 12px 24px;
+            border: 1px solid #000;
+            background: linear-gradient(0deg, #353A40 0%, #16171B 100%);
+            &.svg__wrap {
+                @include circle(50px,45px);
+                padding: 0;
+            }
+            &:link, &:visited {
+                @include border-radius(100px);
+                background: rgba(54, 158, 73, 0.1);
+            }
+            &:hover, &:focus {
+                @include animation(gelatine 0.5s 1);
+                transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+            }
+            &:link {
+                &:hover, &:focus {
+                    @include animation(gelatine 0.5s 1);
+                    transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+                }
+            }
+            &:visited {
+                &:hover, &:focus {
+                    @include animation(gelatine 0.5s 1);
+                    transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+                }
+            }
+            &:hover{
+                .tr__menu{border-color: rgba(54,158,73,0.1);background: rgba(54,158,73,0.1);}
+                .txt{color: #369E49;}
+                svg path{stroke: #369E49;}
+            }
+        }
+    }
+}
+@include keyframes(gelatine){
+    0%{transform: scale(1, 1);}
+    25% {transform: scale(0.9, 1.1);}
+    50% {transform: scale(1.1, 0.9);}
+    75% {transform: scale(0.95, 1.05);}
+}
+.sub__select__area {
+    @include boxsizing;
+    @include border-radius(11px);
+    @include position(absolute, 70px, 0, auto,auto);
+    display: none;
+    width: 235px;
+    padding: 18px 19px;
+    background: #272B30;
+    box-shadow: inset 0px -1px 1px #181A1D;
+    z-index: 1;
+    .sub__select__item {
+        display: flex;
+        + .sub__select__item {padding-top: 16px;}
+        .svg__wrap{margin-right: 16px;}
+        .sub__txt {    
+            @include font(normal, normal, 15px, #fff, 20px);
+            position: relative;
+            letter-spacing: -0.24px;
+            transition: 0.5s;
+            &::after {
+                @include position(absolute,100%,auto,auto,0);
+                content: "";
+                width: 100%;
+                height: 2px;
+                background: $greenColor;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.5s;
+            }
+        }
+        &:hover{
+            .sub__txt::after{
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+        }
+    }
+    &.show{display: block;}
+}
+

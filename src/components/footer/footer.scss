@@ -1,0 +1,53 @@
+@charset "utf-8"; 
+
+/* *******************************************************
+    filename : footer.css
+    description : footer layout CSS
+******************************************************** */
+
+// import
+@import '../../media/css/common.scss';
+
+/* footer */
+.footer {
+    @include boxsizing;
+    padding: 20px 0 25px;
+    .foot__line{
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin-bottom: 20px;
+        background: #202226;
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.75), inset -2px -2px 2px #4E5154;
+    }
+    .footer__inner {
+        @include dspCollection(flex,space-between,center);
+        max-width: 1380px;
+        width: $size100;
+        margin: auto;
+    }
+    .foot__snn__link {
+        margin-top: 5px;
+        .sns__link + .sns__link {margin-left: 26px;}
+    }
+  
+    .foot__nav {
+        display: flex;
+        .foot__nav__item + .foot__nav__item {padding-left: 56px;}
+        .foot__nav__link {
+            @include font(normal, normal, 13px, rgba(255, 255, 255, 0.5), 18px);
+            font-family: Work Sans;
+            text-align: center;
+            letter-spacing: -0.08px;
+            &:hover {
+                color: #fff;
+                transition: color .3s;
+            }
+        }
+    }
+  
+    .copyright {
+        @include font(normal, normal, 13px, rgba(255, 255, 255, 0.5), 18px);
+        letter-spacing: -0.08px;
+    }
+}

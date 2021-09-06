@@ -1,0 +1,222 @@
+@charset "utf-8";
+
+@import './variable.scss';
+
+@mixin clearfix{
+  &:after{
+    display: block;
+    content:"";
+    clear:both;
+  }
+}
+
+// Mediaquery break point
+$tabletPoint:1000px;
+$mobilePoint:720px;
+$mobDevicePoint:420px;
+
+// size
+$size100 : 100%;
+
+// mediaQuery breaking point :: 반응형 변곡점 설정
+@mixin breakPoint($point:null, $minpoint:0px) {
+	@media all and ( min-width: #{$minpoint} ) and ( max-width: #{$point} ) {
+		@content;
+	}
+}
+
+// width / height 100
+@mixin fullBox(){
+	width: 100%;
+	height: 100%;
+}
+
+// boxsizing 
+@mixin boxsizing(){
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+// boder-radius
+@mixin border-radius($radius) { 
+    -webkit-border-radius: $radius; 
+    -moz-border-radius: $radius; 
+    -ms-border-radius: $radius; 
+    border-radius: $radius; 
+}
+
+// input area
+@mixin inputBox($widht: 100%,$hiehgt:30px,$borderColor:$grayFontColor){
+	width: $widht; height: $hiehgt;
+	border: 1px solid;
+	border-color: $borderColor;
+	padding-left: 5px; background: $masterWiteColor;
+	box-sizing: border-box; line-height: $hiehgt - 2px;
+} 
+
+// transform property
+@mixin transition($property...) {
+    -moz-transition:$property;
+    -o-transition: $property;
+    -webkit-transition: $property;
+    transition: $property;
+}
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+@mixin animation($animation) {
+	-webkit-animation: $animation;
+	-moz-animation: $animation;
+	-ms-animation: $animation;
+	animation: $animation;
+}
+
+// mixin
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content; 
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    } 
+}
+
+
+// position
+@mixin position($position,$top,$right,$bottom,$left){
+	position: $position;
+	top:$top;
+	right: $right;
+	bottom: $bottom;
+	left:$left;
+}
+@mixin translate ($x:0%, $y:0%) {
+	@include transform(translate($x, $y));
+}
+@mixin midCenter($pos:absolute){
+	position:$pos;
+	top:50%; left:50%;
+	@include translate(-50%, -50%);
+}
+@mixin midCenterAbs($position){
+	position:$position;
+	top:0; bottom:0; left:0; right:0;
+	margin:auto;
+}
+// placeholder
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content};
+  &:-moz-placeholder           {@content};
+  &::-moz-placeholder          {@content};
+  &:-ms-input-placeholder      {@content};
+}
+
+// Abbreviation :: 말줄임처리
+@mixin Abbreviation {
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+@mixin multiEllipsis($lineNumber, $lineHeight: 1.4em) {
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lineNumber;
+    -webkit-box-orient: vertical;
+    line-height: $lineHeight;
+    height: $lineNumber * $lineHeight;
+}
+
+// portfolio image style
+
+@mixin backgroundImg($imgName:null,$imgType:jpg){
+	background-image:url(../images/#{$imgName}.#{$imgType});
+	background-position: center top;
+	background-size: cover;
+}
+
+@mixin backgroundPosition(){
+	-moz-transition: background-position 2000ms ease-in-out;
+	-webkit-transition: background-position 2000ms ease-in-out;
+	-ms-transition: background-position 2000ms ease-in-out;
+	transition: background-position 2000ms ease-in-out;
+}
+
+// slider style
+@mixin sliderCenter(){
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+// display flex center
+@mixin dspCollection($flex,$justigyContent,$alignItems) {
+    display: $flex;
+    justify-content: $justigyContent;
+    -webkit-justify-content: $justigyContent;
+    align-items: $alignItems;
+	-webkit-align-items: $alignItems;
+}
+@mixin dspFlexCenter(){
+	display: flex; 
+	justify-content: center; 
+	-webkit-justify-content: center; 
+	align-items: center;
+	-webkit-align-items: center;
+}
+
+@mixin flexCenter(){
+	display: flex; 
+	align-items: center;
+	-webkit-align-items: center;
+}
+
+// font style
+// @mixin font-face($name, $file, $weight: noraml, $style: normal) { 
+//     @font-face { 
+//         font-family: "#{$name}"; 
+//         src: url('폰트 경로/#{$file}.woff') format('woff'), 
+//              url('폰트 경로/#{$file}.ttf') format('truetype'); 
+//              font-weight: $weight; 
+//              font-style: $style; 
+//     }
+// }
+
+@mixin font($style,$weight,$size,$color,$lineHeight) {
+    font: {
+        style: $style;
+        weight: $weight;
+        size: $size;
+		// family: $family;
+    }
+    color: $color;
+    line-height: $lineHeight;
+}
+
+// cicle
+@mixin circle($wsize,$hsize) {
+    width: $wsize;
+    height: $hsize;
+    border-radius: 50%;
+}
+

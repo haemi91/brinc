@@ -1,0 +1,24 @@
+@charset "utf-8"; 
+
+/* *******************************************************
+    filename : style.css
+    description : all layout CSS
+******************************************************** */
+
+/* ==================== import ====================== */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+/* ==================== html, body stylings ====================== */
+html{overflow: hidden;}
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #22262C; 
+    font-family: 'Space Mono'; 
+    font-size: 15px; 
+    color: #fff;
+    word-spacing:-0.025em;
+    overflow:overlay;
+    -webkit-text-size-adjust:none
+}

@@ -1,0 +1,122 @@
+@charset "utf-8"; 
+
+/* *******************************************************
+    filename : popup.css
+    description : popup component CSS
+******************************************************** */
+
+// import
+@import '../../media/css/common.scss';
+
+// popup
+#popup__box{
+    @include midCenterAbs(fixed);
+    visibility: hidden;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 5;
+    &.show-modal{
+        visibility: visible;
+        #pop__wrap{
+            transform: translateY(-50%);
+            transition: transform 1.5s ease-in-out;
+        }
+    }
+}
+#pop__wrap{
+    @include boxsizing;
+    // @include midCenter;
+    @include border-radius(24px);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    margin: auto;
+    padding: 25px;
+    background: linear-gradient(180deg, #353A40 0%, #16171B 100%);
+    transition: transform .3s ease-in-out;
+    &.pop__sm{width:368px}
+    .pop__head{
+        @include dspCollection(flex,space-between,center);
+        .tit{
+            @include font(normal, bold, 22px, #fff, 28px);
+        }
+        .pop__close{
+            @include circle(48px,48px);
+            @include border-radius(30px);
+            background: linear-gradient(318.21deg, #2C3036 14.05%, #31343C 85.29%);
+            transform: rotate(180deg);
+            box-shadow: 1px 1px 6px #3e3e3e;
+            .close{
+                @include dspFlexCenter;
+                @include circle(44px,44px);
+                @include border-radius(30px);
+                background: linear-gradient(320.66deg, #2F353A 14.75%, #1C1F22 84.81%);
+                box-shadow: 1px 1px 9px #2b2a2a;
+            }
+            &:hover .close{
+                transform: rotate(180deg);
+                transition: transform 1s ease-in-out;
+            }
+        }
+    }
+    .pop__body{
+        .select__menu__box{padding-top: 25px;}
+        .select__menu__list{
+            @include boxsizing;
+            @include border-radius(12px);
+            height: 64px;
+            padding: 4px;
+            background: #202226;
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.75), inset -2px -2px 2px #4E5154;
+            + .select__menu__list{margin-top: 15px;}
+            .menu__list__box{
+                @include boxsizing;
+                @include flexCenter;
+                @include border-radius(12px);
+                height: 56px;
+            }
+            .select__ico{
+                display: inline-block;
+                width: 40px;
+                padding: 0 15px;
+                text-align: center
+            }
+            .select__tit{
+                font-family: Work Sans;
+                @include font(normal, 600, 15px, #fff, 20px);
+                letter-spacing: 0.76px;
+            }
+            &:hover,
+            &.active{
+                border: 2px solid #369E49;
+            }
+        }
+    }
+    .pop__foot{
+        margin-top: 40px;
+    }
+}
+
+// button 
+.btn__connect__box{
+    @include boxsizing;
+    @include border-radius(12px);
+    padding: 2px;
+    background: linear-gradient(320.66deg, #01AA68 14.75%, #00D381 84.81%);;
+    &.off{filter: brightness(0.5);}
+    &.on{filter: brightness(1);}
+}
+.btn__full{
+    @include dspFlexCenter;
+    @include border-radius(12px);
+    width: 100%;
+    height: 52px;
+    background: linear-gradient(320.66deg, #48DC63 14.75%, #369E49 84.81%);;
+    .txt{
+        padding-left: 10px;
+        @include font(normal, bold, 15px, #202024, 24px);
+        letter-spacing: -0.41px;
+    }
+    
+}
